@@ -1,0 +1,5 @@
+#Scratch Blocks => Compatível com nosso JSON;
+
+#Beautiful Diagrams => Não compatível com nosso JSON (exige coordenadas e ID único no objeto);
+
+#EasyDiagram => Projeto não renderizou (não foi possível testá-lo)

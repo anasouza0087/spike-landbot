@@ -1,0 +1,76 @@
+{
+    "version": 2,
+    "options": [
+        {
+            "action_type": "send_text",
+            "action_content": {
+                "type": "simple_message",
+                "message": "Olá,\nSeja Bem vindo a MKOm!"
+            }
+        },
+        {
+            "action_content": {
+                "time_not_interaction": "",
+                "invalid_message": "Ops! Opção inválida, por favor digite novamente.",
+                "initial_message": "Selecione a opção desejada:\n",
+                "retry_message": "Desculpa não consegui identificar a sua opção, aguarde um momento, nossa equipe já irá atendê-lo.",
+                "retry": 3,
+                "not_interaction_action": {
+                    "action_type": "send_text",
+                    "action_content": {
+                        "type": "simple_message",
+                        "message": "Oi! Você ainda está ai, podemos retomar o atendimento?"
+                    }
+                },
+                "retry_content": {
+                    "action_type": "send_text",
+                    "action_content": {
+                        "type": "simple_message",
+                        "message": "Estou em fase de aprendizado e não consigo resolver todas suas dúvidas. Não consegui identificar sua opção, mas aguarde que nossa equipe já vai atendê-lo."
+                    }
+                },
+                "options": [
+                    {
+                        "action_content": {
+                            "options": [
+                                {
+                                    "action_content": {
+                                        "type": "sequence",
+                                        "offline_behavior": null,
+                                        "attendants_id": [
+                                            1360,
+                                            753,
+                                            2929,
+                                            6276,
+                                            1361
+                                        ]
+                                    },
+                                    "action_type": "attendance_auto_allocation"
+                                }
+                            ]
+                        },
+                        "position": 1,
+                        "code": 1,
+                        "name": "Suporte"
+                    },
+                    {
+                        "action_content": {
+                            "options": [
+                                {
+                                    "action_content": {
+                                        "chatbot_id": "1229"
+                                    },
+                                    "action_type": "move_chatbot"
+                                }
+                            ]
+                        },
+                        "position": 2,
+                        "code": 2,
+                        "name": "Comercial"
+                    }
+                ]
+            },
+            "action_type": "interactive_menu"
+        }
+    ]
+}
